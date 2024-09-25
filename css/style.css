@@ -1,4 +1,8 @@
-/* General Reset */
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +10,13 @@
   font-family: "Fira Code", Courier, monospace;
 }
 
-/* Estilos para el video de fondo */
 body, html {
-  margin: 0;
-  padding: 0;
   height: 100%;
   overflow: hidden;
-  background-color: #000;
+  /* background-image: url("../img/dragon-background.webp"); */
+  background-position: center;
+  background-size: 70%;
+  background-color: rgb(15, 15, 15);
 }
 
 h1, h2 {
@@ -25,6 +29,7 @@ h1, h2 {
   flex: 1;
   margin: 2%;
   z-index: 1;
+  height: 100%;
 }
 
 .header {
@@ -39,7 +44,7 @@ h1, h2 {
 .logo img {
   width: 90px;
   height: 90px;
-  border-radius: 24px;
+  border-radius: 6px;
 }
 
 .header-title {
@@ -69,33 +74,17 @@ h1, h2 {
   text-align: center;
   text-decoration: none;
   font-size: 1.2em;
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: glowing-text 5s linear infinite;
+  color: white;
 }
 
 .main-section {
-  flex: 1;
-  margin-top: 1em;
+  margin-top: 2.5em;
 }
 
 .main-area {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 2.5em;
 }
 
 .section-area {
@@ -176,7 +165,7 @@ h1, h2 {
   height: 100px;
   border: 4px solid transparent;
   border-radius: 12px;
-  margin-top: 15px;
+  margin-top: 2.5em;
 }
 
 .footer-area p {
@@ -184,18 +173,19 @@ h1, h2 {
   color: white;
 }
 
-@keyframes glowing-text {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
+/* Bordes animados RGB para las secciones importantes */
+.header, .section-area, .aside-area, .footer-area {
+  border: 4px solid transparent;
+  border-radius: 12px;
+  animation: rgb-border 5s infinite linear;
 }
 
+/* Bordes animados RGB para la barra de navegación */
+.navbar ul li {
+  animation: rgb-border 5s infinite linear;
+}
+
+/* Animación RGB */
 @keyframes rgb-border {
   0% {
     border-color: #ff0000;
@@ -220,5 +210,64 @@ h1, h2 {
   }
   100% {
     border-color: #ff00c8;
+  }
+}
+
+.container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 3vw;
+  line-height: 3vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 3vw;
+  line-height: 3vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
   }
 }
