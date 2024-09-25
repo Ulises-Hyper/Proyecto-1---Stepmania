@@ -75,16 +75,17 @@ h1, h2 {
   text-decoration: none;
   font-size: 1.2em;
   color: white;
+  cursor: pointer;
 }
 
 .main-section {
-  margin-top: 2.5em;
+  margin-top: 2em;
 }
 
 .main-area {
   display: flex;
   justify-content: space-between;
-  gap: 2.5em;
+  gap: 2em;
 }
 
 .section-area {
@@ -121,10 +122,12 @@ h1, h2 {
   display: inline-block;
   padding: 10px 20px;
   background-color: #ff00ff;
-  color: white;
   border-radius: 5px;
-  cursor: pointer;
   text-align: center;
+}
+
+.section-btn button a:hover {
+  color: white;
 }
 
 .neon-button {
@@ -165,7 +168,7 @@ h1, h2 {
   height: 100px;
   border: 4px solid transparent;
   border-radius: 12px;
-  margin-top: 2.5em;
+  margin-top: 2em;
 }
 
 .footer-area p {
@@ -174,7 +177,7 @@ h1, h2 {
 }
 
 /* Bordes animados RGB para las secciones importantes */
-.header, .section-area, .aside-area, .footer-area {
+.header, .section-area, .aside-area, .footer-area, .area-div__form {
   border: 4px solid transparent;
   border-radius: 12px;
   animation: rgb-border 5s infinite linear;
@@ -219,7 +222,7 @@ h1, h2 {
   vertical-align: middle;
 }
 
-.neon {
+.header-title {
   font-family: neon;
   color: #FB4264;
   font-size: 3vw;
@@ -227,7 +230,7 @@ h1, h2 {
   text-shadow: 0 0 3vw #F40A35;
 }
 
-.flux {
+.header-title2 {
   font-family: neon;
   color: #426DFB;
   font-size: 3vw;
@@ -235,13 +238,13 @@ h1, h2 {
   text-shadow: 0 0 3vw #2356FF;
 }
 
-.neon {
+.header-title {
   animation: neon 1s ease infinite;
   -moz-animation: neon 1s ease infinite;
   -webkit-animation: neon 1s ease infinite;
 }
 
-@keyframes neon {
+@keyframes header-title {
   0%,
   100% {
     text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
@@ -253,14 +256,14 @@ h1, h2 {
   }
 }
 
-.flux {
+.header-title2 {
   animation: flux 2s linear infinite;
   -moz-animation: flux 2s linear infinite;
   -webkit-animation: flux 2s linear infinite;
   -o-animation: flux 2s linear infinite;
 }
 
-@keyframes flux {
+@keyframes header-title2 {
   0%,
   100% {
     text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
@@ -270,4 +273,101 @@ h1, h2 {
     text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
     color: #146C80;
   }
+}
+
+/* Página Canciones*/
+
+.area-div__form {
+  color: white;
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.area-div__form h2{
+  margin-top: 1em;
+  text-align: center;
+}
+
+.area-div__form .form {
+  margin-top: 30px;
+}
+
+.main-section__form {
+  margin-top: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-box {
+  margin: 1em;
+}
+
+.form .input-box .custom-file{
+  padding: 1em;
+}
+
+.input-box label {
+  color: #fff;
+}
+
+.form .input-box input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1em;
+  padding: 10px;
+}
+
+.input-box input {
+  margin-top: 10px;
+}
+
+/* Estilos personalizados para el botón */
+.custom-file {
+  display: flex;
+  align-items: center;
+  margin: 16px;  /* Mantiene el margen personalizado */
+  gap: 10px;     /* Separación entre botón y texto */
+}
+
+.custom-button {
+  padding: 10px 20px;        /* Tamaño del botón */
+  background-color: #3498db; /* Color de fondo del botón */
+  color: white;              /* Color del texto */
+  border: none;              /* Sin bordes */
+  border-radius: 5px;        /* Bordes redondeados */
+  cursor: pointer;           /* Cambia el cursor cuando pasas por encima */
+  transition: background-color 0.3s ease;  /* Transición suave al hacer hover */
+}
+
+.custom-button:hover {
+  background-color: #2980b9; /* Color del botón al hacer hover */
+}
+
+.custom-text {
+  font-size: 14px;  /* Tamaño del texto */
+  color: #555;      /* Color del texto */
+}
+
+.real-file {
+  display: none; /* Oculta el input real */
+}
+
+.submit-btn__div {
+  display: flex;
+}
+
+.submit-btn {
+  all: unset;
+  padding: 10px 20px;
+  background-color: #ff00ff;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
 }
