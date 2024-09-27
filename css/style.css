@@ -352,11 +352,7 @@ h1, h2 {
 
 .custom-text {
   font-size: 14px;  /* Tamaño del texto */
-  color: #555;      /* Color del texto */
-}
-
-.real-file {
-  display: none; /* Oculta el input real */
+  color: white;      /* Color del texto */
 }
 
 .submit-btn__div {

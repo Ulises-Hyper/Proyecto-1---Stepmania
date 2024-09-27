@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/main.js"></script>
 </head>
-
 <body>
   <div class="main-container">
     <header class="header">
@@ -21,7 +19,7 @@
       <nav class="navbar">
         <ul>
           <li><a href="#">Jugar</a></li>
-          <li><a href="canciones.html">Cançons</a></li>
+          <li><a href="canciones.html">Canciones</a></li>
           <li><a href="#">Clasificacions</a></li>
         </ul>
       </nav>
@@ -29,10 +27,9 @@
     <div class="main-section__form">
       <main class="main-area__form">
         <div class="area-div__form">
-          <h2>Lista de canciones</h2>
+          <h2>Añadir canciones</h2>
           <div class="div__form">
-            <form action="php/form.php" class="form" method="post">
-
+            <form action="php/form.php" class="form"  enctype="multipart/form-data" method="POST">
               <div class="input-box">
                 <label>Nombre de la canción: </label>
                 <input type="text" placeholder="Nombre de la canción" name="cancion" />
@@ -42,15 +39,21 @@
                 <input type="text" placeholder="Nombre del artista" name="artista" />
               </div>
               <div class="custom-file">
-                <input type="file" class="real-file" hidden="hidden" />
-                <button type="button" class="custom-button">Seleccionar archivo</button>
-                <span class="custom-text">No se ha seleccionado archivo</span>
+                <label></label>
+                <input type="file" class="real-file" name="archivo-cancion"/>
               </div>
               <div class="custom-file">
-                <input type="file" class="real-file" hidden="hidden" />
-                <button type="button" class="custom-button">Seleccionar archivo</button>
-                <span class="custom-text">No se ha seleccionado archivo</span>
-              </div>              
+                <label></label>
+                <input type="file" class="real-file" name="archivo-portada"/>
+              </div>
+              <div class="custom-file">
+                <label></label>
+                <input type="file" class="real-file" name="archivo-txt"/>
+              </div>
+              <div class="input-box">
+                <label>Añade el TXT de la canción: </label>
+                <input type="textarea"/>
+              </div>            
               <div class="submit-btn__div">
                 <button type="submit" class="submit-btn">
                   Añadir Canción
@@ -61,10 +64,6 @@
         </div>
       </main>
     </div>
-    <footer class="footer-area">
-      <p>© 2024 STEPMANIA, ES. ALL RIGHTS RESERVED</p>
-    </footer>
   </div>
 </body>
-
 </html>
