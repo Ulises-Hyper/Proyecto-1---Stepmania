@@ -10,7 +10,8 @@
   font-family: "Fira Code", Courier, monospace;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   overflow: hidden;
   /* background-image: url("../img/dragon-background.webp"); */
@@ -19,7 +20,8 @@ body, html {
   background-color: rgb(15, 15, 15);
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #00ffff;
 }
 
@@ -177,7 +179,11 @@ h1, h2 {
 }
 
 /* Bordes animados RGB para las secciones importantes */
-.header, .section-area, .aside-area, .footer-area, .area-div__form {
+.header,
+.section-area,
+.aside-area,
+.footer-area,
+.area-div__form {
   border: 4px solid transparent;
   border-radius: 12px;
   animation: rgb-border 5s infinite linear;
@@ -224,18 +230,18 @@ h1, h2 {
 
 .header-title {
   font-family: neon;
-  color: #FB4264;
+  color: #fb4264;
   font-size: 3vw;
   line-height: 3vw;
-  text-shadow: 0 0 3vw #F40A35;
+  text-shadow: 0 0 3vw #f40a35;
 }
 
 .header-title2 {
   font-family: neon;
-  color: #426DFB;
+  color: #426dfb;
   font-size: 3vw;
   line-height: 3vw;
-  text-shadow: 0 0 3vw #2356FF;
+  text-shadow: 0 0 3vw #2356ff;
 }
 
 .header-title {
@@ -247,11 +253,13 @@ h1, h2 {
 @keyframes header-title {
   0%,
   100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
+    text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
+      0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
+    color: #fed128;
   }
   50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    text-shadow: 0 0 0.5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
+      0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
     color: #806914;
   }
 }
@@ -266,12 +274,14 @@ h1, h2 {
 @keyframes header-title2 {
   0%,
   100% {
-    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
+    text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
+      0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe, 0.5vw 0.5vw 0.1vw #147280;
+    color: #28d7fe;
   }
   50% {
-    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
+    text-shadow: 0 0 0.5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180,
+      0 0 5vw #082180, 0 0 0.2vw #082180, 0.5vw 0.5vw 0.1vw #0a3940;
+    color: #146c80;
   }
 }
 
@@ -287,7 +297,7 @@ h1, h2 {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.area-div__form h2{
+.area-div__form h2 {
   margin-top: 1em;
   text-align: center;
 }
@@ -307,7 +317,7 @@ h1, h2 {
   margin: 1em;
 }
 
-.form .input-box .custom-file{
+.form .input-box .custom-file {
   padding: 1em;
 }
 
@@ -332,18 +342,18 @@ h1, h2 {
 .custom-file {
   display: flex;
   align-items: center;
-  margin: 16px;  /* Mantiene el margen personalizado */
-  gap: 10px;     /* Separación entre botón y texto */
+  margin: 16px; /* Mantiene el margen personalizado */
+  gap: 10px; /* Separación entre botón y texto */
 }
 
 .custom-button {
-  padding: 10px 20px;        /* Tamaño del botón */
+  padding: 10px 20px; /* Tamaño del botón */
   background-color: #3498db; /* Color de fondo del botón */
-  color: white;              /* Color del texto */
-  border: none;              /* Sin bordes */
-  border-radius: 5px;        /* Bordes redondeados */
-  cursor: pointer;           /* Cambia el cursor cuando pasas por encima */
-  transition: background-color 0.3s ease;  /* Transición suave al hacer hover */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor cuando pasas por encima */
+  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
 }
 
 .custom-button:hover {
@@ -351,8 +361,8 @@ h1, h2 {
 }
 
 .custom-text {
-  font-size: 14px;  /* Tamaño del texto */
-  color: white;      /* Color del texto */
+  font-size: 14px; /* Tamaño del texto */
+  color: white; /* Color del texto */
 }
 
 .submit-btn__div {
@@ -366,4 +376,89 @@ h1, h2 {
   border-radius: 5px;
   text-align: center;
   margin: auto;
+}
+
+/* Pagina lista-canciones*/
+
+svg {
+  height: 24px;
+  width: 24px;
+}
+
+.main-section__list {
+  margin-top: 2em;
+  color: white;
+}
+
+.list-songs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas */
+  grid-gap: 24px; /* Espacio entre las canciones */
+  margin-top: 1em;
+}
+
+.list-song {
+  display: flex;
+  background-color: rgba(53, 53, 53, 0.7);
+  border-radius: 10px;
+  padding: 12px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.list-songs__right {
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente */
+  justify-content: space-between; /* Distribuye los elementos */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.list-songs-right__img img {
+  width: 80px; /* Ajusta el tamaño de la imagen */
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+}
+
+.list-songs-right__info {
+  flex: 1; /* Hace que esta sección ocupe el espacio restante */
+  padding-left: 16px; /* Añade un poco de espacio entre la imagen y el texto */
+}
+
+.song-title {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.song-artist {
+  color: #acacac;
+  margin: 0;
+}
+
+.list-songs-right__play {
+  margin-left: 16px; /* Añade espacio entre el texto y el botón */
+}
+
+.list-songs-right__play button {
+  width: 56px;
+  height: 56px;
+  background-color: #1ed760;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  display: none;
+}
+
+.list-song:hover .list-songs-right__play button{
+  display: block;
+}
+
+.list-songs-right__play svg {
+  width: 24px;
+  height: 24px;
 }
