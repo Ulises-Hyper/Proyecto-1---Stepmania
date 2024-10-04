@@ -179,16 +179,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             file_put_contents($jsonFile, json_encode($jsonData, JSON_PRETTY_PRINT));
 
             // Redirigir con éxito
-            header("Location: ../php/lista-canciones.php?status=success&message=" . urlencode("Canción subida correctamente"));
+            header("Location: ../php/listaCanciones.php?status=success&message=" . urlencode("Canción subida correctamente"));
             exit();
         } else {
-            header("Location: ../añadir-canciones.html?status=error&message=" . urlencode("Error al subir los archivos"));
+            header("Location: ../añadirCanciones.html?status=error&message=" . urlencode("Error al subir los archivos"));
             exit();
         }
     } else {
         // Si hay errores
         $error_message = implode(", ", $errores);
-        header("Location: ../añadir-canciones.html?status=error&message=" . urlencode($error_message));
+        header("Location: ../añadirCanciones.html?status=error&message=" . urlencode($error_message));
         exit();
     }
 }

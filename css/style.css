@@ -388,6 +388,7 @@ svg {
 .main-section__list {
   margin-top: 2em;
   color: white;
+  overflow-y: auto;
 }
 
 .list-songs {
@@ -401,9 +402,8 @@ svg {
   display: flex;
   background-color: rgba(53, 53, 53, 0.7);
   border-radius: 10px;
-  padding: 12px;
+  padding: 6px;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: stretch;
 }
 
@@ -416,8 +416,8 @@ svg {
 }
 
 .list-songs-right__img img {
-  width: 80px; /* Ajusta el tamaño de la imagen */
-  height: 80px;
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: 100px;
   border-radius: 8px;
   object-fit: cover; /* Ajusta la imagen al contenedor */
 }
@@ -439,10 +439,11 @@ svg {
 }
 
 .list-songs-right__play {
-  margin-left: 16px; /* Añade espacio entre el texto y el botón */
+  display: flex;
+  margin-left: 16px;
 }
 
-.list-songs-right__play button {
+.list-songs-right__play .play-button {
   width: 56px;
   height: 56px;
   background-color: #1ed760;
@@ -451,14 +452,76 @@ svg {
   justify-content: center;
   align-items: center;
   border: none;
-  display: none;
 }
 
-.list-song:hover .list-songs-right__play button{
-  display: block;
+.list-song .list-songs-right__play button{
+  margin: 12px;
 }
 
 .list-songs-right__play svg {
   width: 24px;
   height: 24px;
+}
+
+.list-songs-right__play .edit-button {
+  width: 56px;
+  height: 56px;
+  background-color: #1ed760;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.edit-button:hover {
+  background-color: #f0f0f0; /* Color de fondo cuando se pasa el mouse */
+  transform: scale(1.1); /* Escala el botón ligeramente */
+}
+
+.edit-button svg {
+  fill: #f0f0f0; /* Color del icono */
+  transition: fill 0.3s ease; /* Transición para el color del icono */
+}
+
+.edit-button:hover svg {
+  fill: #1ed760; /* Cambia el color del icono cuando se pasa el mouse */
+}
+
+.list-songs-right__play .delete-button {
+  width: 56px;
+  height: 56px;
+  background-color: #ff0000;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Pulgar (handle) de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #555; /* Color del pulgar */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+/* Cambiar la apariencia de la barra cuando el usuario interactúa con ella (hover) */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #333; /* Color del pulgar al pasar el ratón sobre él */
+}
+
+/* Estilo de la pista (track) de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: #ddd; /* Color de la pista */
+  border-radius: 8px; /* Borde redondeado de la pista */
+}
+
+/* Cambiar la apariencia de la pista cuando el usuario interactúa con ella (hover) */
+::-webkit-scrollbar-track:hover {
+  background-color: #ccc; /* Color de la pista al pasar el ratón sobre ella */
 }
