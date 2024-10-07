@@ -1,1 +1,56 @@
-[]
+[
+    {
+        "id": 1,
+        "titulo": "No hago trap",
+        "artista": "Milo J",
+        "cancion": "..\/uploads\/songs\/MILO_J_-_NO_HAGO_TRAP__Video_Oficial__1728257176.mp3",
+        "portada": "..\/uploads\/img\/no-hago-trap_1728257176.jpeg",
+        "txt": "..\/uploads\/txt\/txt_1728257176.txt",
+        "fecha_subida": "06-10-2024"
+    },
+    {
+        "id": 2,
+        "titulo": "X-SLIDE",
+        "artista": "808iuli,2KE",
+        "cancion": "..\/uploads\/songs\/808iuli_2KE_-_X-SLIDE_1728257278.mp3",
+        "portada": "..\/uploads\/img\/808iuli_2KE-X-SLIDE_1728257278.jpg",
+        "txt": "..\/uploads\/txt\/txt_1728257278.txt",
+        "fecha_subida": "06-10-2024"
+    },
+    {
+        "id": 3,
+        "titulo": "MANDA BALA",
+        "artista": "Ariis",
+        "cancion": "..\/uploads\/songs\/ariis_-_MANDA_BALA_1728257332.mp3",
+        "portada": "..\/uploads\/img\/ariis_-_MANDA_BALA_1728257332.jpg",
+        "txt": "..\/uploads\/txt\/txt_1728257332.txt",
+        "fecha_subida": "06-10-2024"
+    },
+    {
+        "id": 4,
+        "titulo": "Cute Depressed",
+        "artista": "Dyan Dxddy",
+        "cancion": "..\/uploads\/songs\/Dyan_Dxddy_-_Cute_Depressed_1728257379.mp3",
+        "portada": "..\/uploads\/img\/cute-depressed_1728257379.jpg",
+        "txt": "..\/uploads\/txt\/txt_1728257379.txt",
+        "fecha_subida": "06-10-2024"
+    },
+    {
+        "id": 5,
+        "titulo": "Nitro",
+        "artista": "LXNGVX",
+        "cancion": "..\/uploads\/songs\/lxngvx_-_NITRO_1728257410.mp3",
+        "portada": "..\/uploads\/img\/lxngvx_-_nitro_1728257410.jpg",
+        "txt": "..\/uploads\/txt\/txt_1728257410.txt",
+        "fecha_subida": "06-10-2024"
+    },
+    {
+        "id": 6,
+        "titulo": "AUTOMOTIVO PEGA 1.0",
+        "artista": "Phonk Killer",
+        "cancion": "..\/uploads\/songs\/phonk_killer_-_AUTOMOTIVO_PEGA_1.0_1728257483.mp3",
+        "portada": "..\/uploads\/img\/phonk_killer_-_AUTOMOTIVO_PEGA_1728257483.jpg",
+        "txt": "..\/uploads\/txt\/txt_1728257483.txt",
+        "fecha_subida": "06-10-2024"
+    }
+]

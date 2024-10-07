@@ -19,3 +19,7 @@ function eliminarCancion(id_cancion) {
       .catch(error => console.error('Error al eliminar la canción:', error));
   }
 }
+
+function editarCancion(id) {
+  window.location.href = "editarCancion.php?id=" + id;  // Redirige al formulario de edición
+}
