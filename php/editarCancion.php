@@ -40,7 +40,6 @@ if ($cancion === null) {
       </h1>
       <nav class="navbar">
         <ul>
-          <li><a href="#">Jugar</a></li>
           <li><a href="listaCanciones.php">Lista Canciones</a></li>
           <li><a href="../añadirCanciones.html">Añadir Canciones</a></li>
           <li><a href="#">Clasificaciones</a></li>

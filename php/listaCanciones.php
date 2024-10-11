@@ -26,10 +26,9 @@ $canciones = json_decode(file_get_contents($jsonFile), true);
       </h1>
       <nav class="navbar">
         <ul>
-          <li><a href="#">Jugar</a></li>
           <li><a href="listaCanciones.php">Lista Canciones</a></li>
           <li><a href="../añadirCanciones.html">Añadir Canciones</a></li>
-          <li><a href="#">Clasificaciones</a></li>
+          <li><a href="#">Clasificacion</a></li>
         </ul>
       </nav>
     </header>
@@ -52,10 +51,9 @@ $canciones = json_decode(file_get_contents($jsonFile), true);
                       <p class="song-artist"><?= htmlspecialchars($cancion['artista']) ?></p>
                     </div>
                     <div class="list-songs-right__play">
-                      <button class="play-button">
+                      <button class="play-button" onclick="redirigirAJugar(<?= $cancion['id'] ?>)">
                         <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE">
-                          <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
-                          </path>
+                          <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                         </svg>
                       </button>
                       <button class="edit-button" onclick="editarCancion(<?= $cancion['id'] ?>)">
