@@ -1,14 +1,5 @@
 [
     {
-        "id": 1,
-        "titulo": "No hago trap",
-        "artista": "Milo J",
-        "cancion": "..\/uploads\/songs\/MILO J - NO HAGO TRAP (Video Oficial).mp3",
-        "portada": "..\/uploads\/img\/no-hago-trap_1728257176.jpeg",
-        "txt": "..\/uploads\/txt\/txt_1728257176.txt",
-        "fecha_subida": "06-10-2024"
-    },
-    {
         "id": 2,
         "titulo": "X-SLIDE",
         "artista": "808iuli,2KE",
@@ -52,5 +43,14 @@
         "portada": "..\/uploads\/img\/phonk_killer_-_AUTOMOTIVO_PEGA_1728257483.jpg",
         "txt": "..\/uploads\/txt\/txt_1728257483.txt",
         "fecha_subida": "06-10-2024"
+    },
+    {
+        "id": 7,
+        "titulo": "No hago trap",
+        "artista": "Milo J",
+        "cancion": "..\/uploads\/songs\/MILO_J_-_NO_HAGO_TRAP__Video_Oficial__1728997599.mp3",
+        "portada": "..\/uploads\/img\/no-hago-trap.jpeg",
+        "txt": "..\/uploads\/txt\/ejemplo_flechas_1728997599.txt",
+        "fecha_subida": "15-10-2024"
     }
 ]

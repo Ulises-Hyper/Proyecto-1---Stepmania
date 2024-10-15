@@ -14,12 +14,11 @@ $canciones = json_decode(file_get_contents($jsonFile), true);
   <link rel="stylesheet" href="../css/style.css" />
   <script src="../js/main.js"></script>
 </head>
-
 <body>
   <div class="main-container">
     <header class="header">
       <div class="logo">
-        <a href="../index.html"><img src="../img/web-logo.webp" alt="web-logo" /></a>
+        <a href="../index.php"><img src="../img/web-logo.webp" alt="web-logo" /></a>
       </div>
       <h1 class="header-title">
         STEP<span class="header-title2">MANIA</span>
@@ -28,7 +27,7 @@ $canciones = json_decode(file_get_contents($jsonFile), true);
         <ul>
           <li><a href="listaCanciones.php">Lista Canciones</a></li>
           <li><a href="../añadirCanciones.html">Añadir Canciones</a></li>
-          <li><a href="#">Clasificacion</a></li>
+          <li><a href="clasificacion.php">Clasificacion</a></li>
         </ul>
       </nav>
     </header>
@@ -39,6 +38,7 @@ $canciones = json_decode(file_get_contents($jsonFile), true);
           <h2>PlayList</h2>
           <div class="list-songs">
             <?php if (!empty($canciones)): ?>
+              <?php rsort($canciones)?>
               <?php foreach ($canciones as $cancion): ?>
                 <div class="list-song">
                   <div class="list-songs__right">
@@ -80,5 +80,4 @@ $canciones = json_decode(file_get_contents($jsonFile), true);
     </div>
   </div>
 </body>
-
 </html>

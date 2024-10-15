@@ -12,7 +12,7 @@ function eliminarCancion(id_cancion) {
     })
       .then((response) => response.text())
       .then((result) => {
-        console.log(result); // Mostrar el resultado (depuración)
+        console.log(result);
         // Recargar la página después de eliminar la canción o mostrar mensaje
         window.location.reload();
       })
@@ -24,38 +24,12 @@ function editarCancion(id) {
   window.location.href = "editarCancion.php?id=" + id; // Redirige al formulario de edición
 }
 
-// Mostrar el modal cuando se selecciona la canción
-function mostrarModal(idCancion) {
-  document.getElementById("usuarioModal").style.display = "block";
-  document.getElementById("id_cancion").value = idCancion; // Guardar el ID de la canción en el campo oculto
-}
-
-// Cerrar el modal
-function cerrarModal() {
-  document.getElementById("usuarioModal").style.display = "none";
-}
-
 function redirigirAJugar(id) {
   // Redirigir a jugar.php con el ID de la canción
   window.location.href = '../php/jugar.php?id=' + id;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Abrir el modal al cargar la página
-  const modal = document.getElementById('usuarioModal');
-  if (modal) {
-      modal.style.display = 'block';
-  }
-});
-
-// Resto del código para cerrar el modal y manejar el juego
-function cerrarModal() {
-  const modal = document.getElementById('usuarioModal');
-  if (modal) {
-      modal.style.display = 'none';
-  }
-}
-
+// Función para guardar el usuario y puntuación en el JSON
 function guardarUsuario() {
   var usuario = document.getElementById('usuario').value;
   var idCancion = document.getElementById('id_cancion').value;

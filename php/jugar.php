@@ -7,6 +7,7 @@ $canciones = json_decode(file_get_contents($jsonFile), true);
 $id = isset($_GET['id']) ? intval($_GET['id']) : null;
 $cancion = null;
 
+// Si el usuario no es null , recorremos el array y  buscamos la canción
 if ($id !== null) {
     foreach ($canciones as $c) {
         if ($c['id'] == $id) {
@@ -15,15 +16,10 @@ if ($id !== null) {
         }
     }
 }
-
+// Mensaje en caso de no encontrar la canción
 if ($cancion === null) {
     die("Canción no encontrada.");
 }
-
-// Pasar la ruta, título y ID al JavaScript
-$rutaCancion = htmlspecialchars($cancion['ruta']);
-$tituloCancion = htmlspecialchars($cancion['titulo']);
-$idCancion = htmlspecialchars($cancion['id']);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -33,24 +29,25 @@ $idCancion = htmlspecialchars($cancion['id']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stepmania</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/game.js"></script> <!-- Incluye el archivo de juego -->
+    <script src="../js/game.js"></script>
 </head>
 
 <body>
     <div class="main-container">
         <header class="header">
             <div class="logo">
-                <a href="../index.html"><img src="../img/web-logo.webp" alt="web-logo" /></a>
+                <a href="../index.php"><img src="../img/web-logo.webp" alt="web-logo" /></a>
             </div>
             <h1 class="header-title">STEP<span class="header-title2">MANIA</span></h1>
             <nav class="navbar">
                 <ul>
                     <li><a href="listaCanciones.php">Lista Canciones</a></li>
                     <li><a href="../añadirCanciones.html">Añadir Canciones</a></li>
-                    <li><a href="#">Clasificacion</a></li>
+                    <li><a href="clasificacion.php">Clasificacion</a></li>
                 </ul>
             </nav>
         </header>
+        <!-- Seccion principal del juego -->
         <div class="main-section">
             <main class="main-area__game">
                 <div class="div-area__game">
@@ -60,6 +57,7 @@ $idCancion = htmlspecialchars($cancion['id']);
                     <div class="item"></div>
                 </div>
             </main>
+            <!-- Barra de progeso -->
             <div class="progress-container">
                 <div class="score-container">
                     <h2>Puntuación: <span id="score">0</span></h2>
@@ -67,12 +65,12 @@ $idCancion = htmlspecialchars($cancion['id']);
                 <div class="progress-bar">
                     <div class="progress"></div>
                 </div>
+                <!-- Nombre de la canción y artista -->
                 <div class="song-info">
-                    <h2><?= $tituloCancion ?></h2>
+                    <h2><?= htmlspecialchars($cancion['titulo']) ?></h2>
                     <p>Artista: <?= htmlspecialchars($cancion['artista']) ?></p>
                 </div>
             </div>
-
             <!-- Modal para pedir nombre de usuario -->
             <div id="usuarioModal" class="modal">
                 <div class="modal-content">
@@ -91,17 +89,8 @@ $idCancion = htmlspecialchars($cancion['id']);
                 </div>
             </div>
 
-            <!-- Audio -->
-            <audio id="audio" src="<?= $rutaCancion ?>" preload="auto"></audio>
         </div>
     </div>
-
-    <script>
-        // Pasar la ruta y título de la canción al archivo JavaScript
-        const rutaCancion = '<?= $rutaCancion ?>';
-        const tituloCancion = '<?= $tituloCancion ?>';
-        const idCancion = '<?= $idCancion ?>'; // Ahora pasas también el ID
-    </script>
 </body>
 
 </html>

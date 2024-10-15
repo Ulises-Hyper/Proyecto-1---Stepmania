@@ -107,15 +107,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verificar y crear directorios si no existen
     if (!file_exists($portada_dir)) {
-        mkdir($portada_dir, 0777, true);
+        mkdir($portada_dir, 0755, true);
     }
 
     if (!file_exists($cancion_dir)) {
-        mkdir($cancion_dir, 0777, true);
+        mkdir($cancion_dir, 0755, true);
     }
 
     if (!file_exists($txt_dir)) {
-        mkdir($txt_dir, 0777, true);
+        mkdir($txt_dir, 0755, true);
     }
 
     if (empty($errores)) {
@@ -160,8 +160,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $jsonFile = '../json/canciones.json';
             $jsonData = file_exists($jsonFile) ? json_decode(file_get_contents($jsonFile), true) : [];
 
+            // Generamos el nuevo ID
             $nuevoId = generarNuevoId($jsonFile);
-
+            
+            // Array de la canción
             $nuevaCancion = array(
                 'id' => $nuevoId,
                 'titulo' => $nombre,
@@ -182,6 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../php/listaCanciones.php?status=success&message=" . urlencode("Canción subida correctamente"));
             exit();
         } else {
+            // Redirigir con error
             header("Location: ../añadirCanciones.html?status=error&message=" . urlencode("Error al subir los archivos"));
             exit();
         }

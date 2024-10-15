@@ -7,6 +7,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(file_exists($jsonFile)){
         $jsonData = json_decode(file_get_contents($jsonFile), true);
 
+        // Si el fichero no está vacío recorremos el array para eliminar los archivos de la canción
         if(!empty($jsonData)) {
             foreach($jsonData as $index => $cancion){
                 if($cancion['id'] == $id){

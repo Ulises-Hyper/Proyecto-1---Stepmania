@@ -13,7 +13,7 @@ if ($usuario && $id_cancion) {
     $cookieValue = bin2hex(random_bytes(16)); // Genera un valor único para la cookie
     setcookie('usuario', $cookieValue, time() + (86400 * 30), "/"); // La cookie durará 30 días
 
-    // Cargar el archivo JSON de usuarios
+    // Si el archivo existe cargar el archivo JSON de usuarios
     if (file_exists($jsonFile)) {
         $usuarios = json_decode(file_get_contents($jsonFile), true);
     } else {
@@ -30,7 +30,7 @@ if ($usuario && $id_cancion) {
             $user['ultima_entrada'] = date('Y-m-d H:i:s');
             if ($puntuacion !== null) {
                 // Actualizar la puntuación
-                $user['puntuacion'] += $puntuacion; // Sumar la puntuación en lugar de reemplazarla
+                $user['puntuacion'] = $puntuacion; //  Reemplazar la puntuación
             }
             break;
         }

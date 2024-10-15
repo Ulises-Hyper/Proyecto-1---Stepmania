@@ -1,12 +1,10 @@
 <?php
-// Leer el archivo JSON donde se almacenan los usuarios
+// Leer el archivo JSON de los usuarios
 $jsonFile = '../json/usuarios.json'; // Ajusta la ruta de tu archivo JSON
 $usuarios = json_decode(file_get_contents($jsonFile), true);
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,12 +12,11 @@ $usuarios = json_decode(file_get_contents($jsonFile), true);
   <link rel="stylesheet" href="../css/style.css" />
   <script src="../js/main.js"></script>
 </head>
-
 <body>
   <div class="main-container">
     <header class="header">
       <div class="logo">
-        <a href="../index.html"><img src="../img/web-logo.webp" alt="web-logo" /></a>
+        <a href="../index.php"><img src="../img/web-logo.webp" alt="web-logo" /></a>
       </div>
       <h1 class="header-title">
         STEP<span class="header-title2">MANIA</span>
@@ -32,7 +29,7 @@ $usuarios = json_decode(file_get_contents($jsonFile), true);
         </ul>
       </nav>
     </header>
-
+    <!-- Tabla clasificatoria -->
     <div class="main-section__ranking">
       <main class="main-area__ranking">
         <div class="area-div__ranking">
@@ -53,6 +50,7 @@ $usuarios = json_decode(file_get_contents($jsonFile), true);
                     usort($usuarios, function($a, $b) {
                         return $b['puntuacion'] - $a['puntuacion'];
                     });
+                    // Recorremos el array y mostramos el puesto, usuario y puntuación
                     foreach ($usuarios as $index => $user): ?>
                         <tr>
                             <td><?php echo $index + 1; ?></td>

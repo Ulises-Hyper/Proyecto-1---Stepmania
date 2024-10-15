@@ -161,6 +161,8 @@ h2 {
 
 .aside-list ol li {
   padding: 12px;
+  text-decoration: none;
+  list-style: none;
 }
 
 .footer-area {
@@ -481,6 +483,15 @@ svg {
   transform: scale(1.1); /* Escala el botón ligeramente */
 }
 
+.play-button:hover {
+  background-color: #f0f0f0; /* Color de fondo cuando se pasa el mouse */
+  transform: scale(1.1); /* Escala el botón ligeramente */
+}
+
+.delete-button:hover {
+  transform: scale(1.1); /* Escala el botón ligeramente */
+}
+
 .edit-button svg {
   fill: #f0f0f0; /* Color del icono */
   transition: fill 0.3s ease; /* Transición para el color del icono */
@@ -489,6 +500,31 @@ svg {
 .edit-button:hover svg {
   fill: #1ed760; /* Cambia el color del icono cuando se pasa el mouse */
 }
+
+/* Estilos hover para los botones */
+.list-songs-right__play .delete-button:hover {
+  background-color: white; /* Fondo blanco al hacer hover */
+}
+
+.list-songs-right__play .delete-button svg {
+  fill: white;
+}
+
+/* Estilos hover específicos para el icono de los botones al hacer hover */
+.list-songs-right__play .delete-button:hover svg {
+  fill: red; /* El icono cambia a rojo al hacer hover */
+}
+
+
+.play-button svg {
+  fill: #f0f0f0; /* Color del icono */
+  transition: fill 0.3s ease; /* Transición para el color del icono */
+}
+
+.play-button:hover svg {
+  fill: #1ed760; /* Cambia el color del icono cuando se pasa el mouse */
+}
+
 
 .list-songs-right__play .delete-button {
   width: 56px;
@@ -552,7 +588,6 @@ svg {
   top: 0;
 }
 
-
 .particles {
   position: absolute;
   top: 0;
@@ -561,6 +596,7 @@ svg {
   height: 100%;
   pointer-events: none;
 }
+
 .particle {
   position: absolute;
   background: #fff;
@@ -589,6 +625,7 @@ svg {
   width: 80%;
   text-align: center;
 }
+
 .progress-bar {
   width: 60%;
   margin: auto;
@@ -597,12 +634,15 @@ svg {
   border-radius: 10px;
   overflow: hidden;
 }
+
 .progress {
-  width: 30%;
+  width: 0%;
   height: 100%;
   background: linear-gradient(90deg, #00ffff, #ff00ff);
   box-shadow: 0 0 10px #0ff;
 }
+
+
 .song-info {
   margin-top: 10px;
   font-size: 20px;
