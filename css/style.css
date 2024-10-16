@@ -1,8 +1,10 @@
+/* Definición de una fuente personalizada para el texto con estilo neon */
 @font-face {
   font-family: neon;
   src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 
+/* Establece los márgenes y padding a 0 y usa box-sizing para incluir el padding en el tamaño total */
 * {
   margin: 0;
   padding: 0;
@@ -10,30 +12,32 @@
   font-family: "Fira Code", Courier, monospace;
 }
 
+/* Oculta las barras de desplazamiento y configura el fondo de la página */
 body,
 html {
-  height: 100%;
   overflow: hidden;
-  /* background-image: url("../img/dragon-background.webp"); */
   background-position: center;
   background-size: 70%;
   background-color: rgb(15, 15, 15);
 }
 
+/* Estilo para encabezados h1 y h2 */
 h1,
 h2 {
   color: #00ffff;
 }
 
+/* Contenedor principal con diseño flexible */
 .main-container {
   display: flex;
   flex-direction: column;
   flex: 1;
   margin: 2%;
   z-index: 1;
-  height: 100%;
+  overflow: auto;
 }
 
+/* Diseño de la cabecera con alineación y espaciado */
 .header {
   display: flex;
   justify-content: space-between;
@@ -43,19 +47,22 @@ h2 {
   border-radius: 20px;
 }
 
+/* Estilo del logo dentro de la cabecera */
 .logo img {
   width: 90px;
   height: 90px;
   border-radius: 6px;
 }
 
+/* Estilo del título de la cabecera */
 .header-title {
   font-size: 28px;
   color: #00ffff;
 }
 
+/* Estilo para la barra de navegación */
 .navbar ul {
-  list-style-type: none;
+  list-style-type: none; /* Elimina los puntos de las listas */
   display: flex;
   gap: 1em;
   padding: 24px;
@@ -67,7 +74,7 @@ h2 {
   border-radius: 10px;
   padding: 0.6em 1.5em;
   background-color: #111;
-  animation: rgb-border 5s infinite linear;
+  animation: rgb-border 5s infinite linear;  /* Animación del borde */
   overflow: hidden;
 }
 
@@ -80,16 +87,20 @@ h2 {
   cursor: pointer;
 }
 
+/* Sección principal con margen superior */
 .main-section {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
+/* Área principal con diseño flexible y espacio entre elementos */
 .main-area {
   display: flex;
   justify-content: space-between;
-  gap: 2em;
+  gap: 1em;
+  overflow: auto;
 }
 
+/* Área de la sección principal con bordes y texto centrado */
 .section-area {
   width: 70%;
   border: 4px solid transparent;
@@ -98,14 +109,17 @@ h2 {
   color: white;
 }
 
+
 .section-area__div {
-  padding: 48px;
+  padding: 12px; /* Espaciado interno */
 }
 
+/* Estilo de los encabezados h2 dentro de las áreas de sección */
 .section-area__div h2 {
   margin: 10px;
 }
 
+/* Lista de elementos en la sección */
 .section-list {
   display: inline-block;
 }
@@ -114,6 +128,7 @@ h2 {
   padding: 12px;
 }
 
+/* Botones de la sección con diseño personalizado */
 .section-btn {
   height: 100%;
   margin: 25px;
@@ -132,6 +147,7 @@ h2 {
   color: white;
 }
 
+/* Estilo de un botón con apariencia de neón */
 .neon-button {
   color: #000;
   border-radius: 12px;
@@ -139,6 +155,7 @@ h2 {
   text-decoration: none;
 }
 
+/* Área lateral con estilo similar a la principal */
 .aside-area {
   width: 30%;
   border: 4px solid transparent;
@@ -155,6 +172,7 @@ h2 {
   margin: 10px;
 }
 
+/* Lista de elementos dentro del área lateral */
 .aside-list {
   display: inline-block;
 }
@@ -165,6 +183,7 @@ h2 {
   list-style: none;
 }
 
+/* Área de pie de página con alineación centrada */
 .footer-area {
   display: flex;
   justify-content: center;
@@ -172,7 +191,7 @@ h2 {
   height: 100px;
   border: 4px solid transparent;
   border-radius: 12px;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .footer-area p {
@@ -193,7 +212,7 @@ h2 {
   animation: rgb-border 5s infinite linear;
 }
 
-/* Bordes animados RGB para la barra de navegación */
+/* Bordes animados RGB para las secciones de la web */
 .navbar ul li {
   animation: rgb-border 5s infinite linear;
 }
@@ -226,12 +245,14 @@ h2 {
   }
 }
 
+/* Estilos para la clase contenedor */
 .container {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
 
+/* Títulos de cabecera con animaciones y efectos de neón */
 .header-title {
   font-family: neon;
   color: #fb4264;
@@ -248,12 +269,14 @@ h2 {
   text-shadow: 0 0 3vw #2356ff;
 }
 
+/* Animaciones en los títulos de cabecera */
 .header-title {
   animation: neon 1s ease infinite;
   -moz-animation: neon 1s ease infinite;
   -webkit-animation: neon 1s ease infinite;
 }
 
+/* Definición de la animación para el título principal */
 @keyframes header-title {
   0%,
   100% {
@@ -275,6 +298,7 @@ h2 {
   -o-animation: flux 2s linear infinite;
 }
 
+/* Definición de la animación para el segundo título */
 @keyframes header-title2 {
   0%,
   100% {
@@ -291,6 +315,7 @@ h2 {
 
 /* Página Canciones*/
 
+/* Estilos del formulario dentro de la sección area-div */
 .area-div__form {
   color: white;
   position: relative;
@@ -301,34 +326,43 @@ h2 {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos del título (h2) dentro del formulario */
 .area-div__form h2 {
   margin-top: 1em;
   text-align: center;
 }
 
+/* Margen superior para el formulario */
 .area-div__form .form {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
+/* Sección principal del formulario */
 .main-section__form {
-  margin-top: 2.5em;
+  margin-top: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: auto;
 }
 
+/* Espaciado entre campos del formulario */
 .input-box {
   margin: 1em;
 }
 
+/* Estilos para el campo de archivo personalizado */
 .form .input-box .custom-file {
   padding: 1em;
 }
+
+/* Estilos para las etiquetas de los campos de entrada */
 
 .input-box label {
   color: #fff;
 }
 
+/* Estilos de los campos de entrada */
 .form .input-box input {
   height: 50px;
   width: 100%;
@@ -338,41 +372,47 @@ h2 {
   padding: 10px;
 }
 
+/* Margen superior para los campos de entrada */
 .input-box input {
   margin-top: 10px;
 }
 
-/* Estilos personalizados para el botón */
+/* Estilos personalizados para el botón de archivo */
 .custom-file {
   display: flex;
   align-items: center;
-  margin: 16px; /* Mantiene el margen personalizado */
-  gap: 10px; /* Separación entre botón y texto */
+  margin: 16px;
+  gap: 10px;
 }
 
 .custom-button {
-  padding: 10px 20px; /* Tamaño del botón */
-  background-color: #3498db; /* Color de fondo del botón */
-  color: white; /* Color del texto */
-  border: none; /* Sin bordes */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor cuando pasas por encima */
-  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+  padding: 10px 20px; 
+  background-color: #3498db;
+  color: white;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
 }
 
+/* Estilos para los botones personalizados */
 .custom-button:hover {
   background-color: #2980b9; /* Color del botón al hacer hover */
+
 }
 
+/* Estilo para el texto dentro del botón personalizado */
 .custom-text {
-  font-size: 14px; /* Tamaño del texto */
-  color: white; /* Color del texto */
+  font-size: 14px;
+  color: white;
 }
 
+/* Contenedor para el botón de envío */
 .submit-btn__div {
   display: flex;
 }
 
+/* Estilos para el botón de envío */
 .submit-btn {
   all: unset;
   padding: 10px 20px;
@@ -384,13 +424,15 @@ h2 {
 
 /* Pagina lista-canciones*/
 
+/* Tamaño de los íconos en formato svg */
 svg {
   height: 24px;
   width: 24px;
 }
 
+/* Sección principal de la lista de canciones */
 .main-section__list {
-  margin-top: 2em;
+  margin-top: 1em;
   color: white;
   overflow-y: auto;
 }
@@ -402,6 +444,7 @@ svg {
   margin-top: 1em;
 }
 
+/* Estilos de cada canción dentro de la lista */
 .list-song {
   display: flex;
   background-color: rgba(53, 53, 53, 0.7);
@@ -411,6 +454,7 @@ svg {
   align-items: stretch;
 }
 
+/* Contenedor para el lado derecho de la lista de canciones */
 .list-songs__right {
   display: flex;
   align-items: center; /* Alinea los elementos verticalmente */
@@ -419,6 +463,7 @@ svg {
   border-radius: 8px;
 }
 
+/* Tamaño y forma de la imagen dentro de la lista de canciones */
 .list-songs-right__img img {
   width: 100px; /* Ajusta el tamaño de la imagen */
   height: 100px;
@@ -431,22 +476,27 @@ svg {
   padding-left: 16px; /* Añade un poco de espacio entre la imagen y el texto */
 }
 
+/* Estilo del título de la canción */
 .song-title {
   color: #fff;
   font-size: 1.5em;
   margin: 0;
 }
 
+/* Estilo del nombre del artista */
 .song-artist {
   color: #acacac;
   margin: 0;
 }
 
+/* Contenedor de los controles de reproducción */
 .list-songs-right__play {
   display: flex;
   margin-left: 16px;
 }
 
+
+/* Estilo de los botones de reproducción */
 .list-songs-right__play .play-button {
   width: 56px;
   height: 56px;
@@ -478,18 +528,21 @@ svg {
   border: none;
 }
 
+/* Efecto hover para el botón de edición */
 .edit-button:hover {
-  background-color: #f0f0f0; /* Color de fondo cuando se pasa el mouse */
-  transform: scale(1.1); /* Escala el botón ligeramente */
+  background-color: #f0f0f0;
+  transform: scale(1.1);
 }
 
+/* Efecto hover para el botón de play */
 .play-button:hover {
-  background-color: #f0f0f0; /* Color de fondo cuando se pasa el mouse */
-  transform: scale(1.1); /* Escala el botón ligeramente */
+  background-color: #f0f0f0;
+  transform: scale(1.1);
 }
 
+/* Efecto hover para el botón de borrar */
 .delete-button:hover {
-  transform: scale(1.1); /* Escala el botón ligeramente */
+  transform: scale(1.1);
 }
 
 .edit-button svg {
@@ -538,156 +591,140 @@ svg {
 }
 
 /* Página para jugar */
+
+/* Página para jugar */
 .main-area__game {
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  gap: 10px;
-  position: relative;
-  overflow: hidden;
-  height: 43.75em;
+  display: flex; /* Usa flexbox para alinear los elementos del área del juego */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  padding: 15px; /* Espaciado interno alrededor del contenedor */
+  gap: 10px; /* Espacio entre los elementos */
+  position: relative; /* Posicionamiento relativo para elementos hijos */
+  overflow: hidden; /* Oculta el desbordamiento horizontal */
+  height: 45em; /* Altura del área del juego */
+  overflow: auto; /* Permite el desplazamiento vertical */
 }
 
 .div-area__game {
-  display: flex;
-  gap: 20px;
+  display: flex; /* Flexbox para alinear los elementos secundarios */
+  gap: 20px; /* Espacio entre los elementos secundarios */
 }
 
 .main-area__game > div {
-  border-radius: 1em;
-  padding: 8px;
-  height: 80%;
-  width: 50%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  border-radius: 1em; /* Bordes redondeados */
+  padding: 8px; /* Espaciado interno */
+  height: 80%; /* Altura relativa del contenedor */
+  width: 50%; /* Anchura del contenedor al 50% */
+  display: flex; /* Flexbox para alinear el contenido interno */
+  align-items: flex-end; /* Alinea el contenido al final del eje vertical */
+  justify-content: center; /* Centra el contenido horizontalmente */
 }
 
 .item {
-  background: rgba(255, 255, 255, 0.1);
-  position: relative;
-  border-radius: 0 1em 1em 1em;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-  height: 108%;
-  width: 120px; /* Ajustar el ancho de los contenedores */
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  position: relative; /* Posicionamiento relativo */
+  border-radius: 0 1em 1em 1em; /* Bordes redondeados en tres esquinas */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); /* Sombra con efecto de resplandor */
+  height: 108%; /* Altura mayor al 100% del contenedor padre */
+  width: 120px; /* Anchura fija de los ítems */
+  display: flex; /* Flexbox para centrar el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  overflow: hidden; /* Oculta el contenido que desborde */
 }
 
 .arrow {
-  width: 100px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-}
-
-.particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.particle {
-  position: absolute;
-  background: #fff;
-  border-radius: 50%;
-  opacity: 0.5;
-  animation: float 5s infinite ease-in-out;
+  width: 100px; /* Anchura de la flecha */
+  height: 100px; /* Altura de la flecha */
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  display: flex; /* Flexbox para centrar el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  font-size: 40px; /* Tamaño de la fuente de la flecha */
+  border-radius: 50%; /* Forma circular */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 0; /* Alinea la flecha al inicio del contenedor padre */
 }
 
 .score-container {
   text-align: center; /* Centra el texto */
-  margin-top: 20px; /* Espacio por encima del contenedor de la puntuación */
+  margin-top: 20px; /* Margen superior */
 }
 
 .score-container h2 {
-  font-size: 24px; /* Tamaño del texto */
-  color: #fff; /* Color del texto */
+  font-size: 24px; /* Tamaño de fuente del puntaje */
+  color: #fff; /* Color blanco */
   padding: 10px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
 }
 
 .progress-container {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  text-align: center;
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 40px; /* Alinea la barra de progreso 40px desde el fondo */
+  left: 50%; /* Centra la barra horizontalmente */
+  transform: translateX(-50%); /* Ajuste preciso para centrar */
+  width: 80%; /* Anchura de la barra de progreso */
+  text-align: center; /* Centra el texto de la barra */
 }
 
 .progress-bar {
-  width: 60%;
-  margin: auto;
-  height: 15px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  overflow: hidden;
+  width: 60%; /* Anchura de la barra de progreso */
+  margin: auto; /* Centra la barra dentro de su contenedor */
+  height: 15px; /* Altura de la barra */
+  background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el desbordamiento */
 }
 
 .progress {
-  width: 0%;
-  height: 100%;
-  background: linear-gradient(90deg, #00ffff, #ff00ff);
-  box-shadow: 0 0 10px #0ff;
+  width: 0%; /* El progreso inicial es del 0% */
+  height: 100%; /* Altura completa del contenedor */
+  background: linear-gradient(90deg, #00ffff, #ff00ff); /* Degradado de colores */
+  box-shadow: 0 0 10px #0ff; /* Sombra para el efecto de resplandor */
 }
 
-
 .song-info {
-  margin-top: 10px;
-  font-size: 20px;
-  color: #fff;
-  text-shadow: 0 0 5px #fff;
+  margin-top: 10px; /* Margen superior */
+  font-size: 20px; /* Tamaño de la fuente */
+  color: #fff; /* Color blanco */
+  text-shadow: 0 0 5px #fff; /* Sombra de texto para resaltar */
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial y final sin movimiento */
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px); /* Movimiento hacia arriba en el punto medio */
   }
 }
 
 /* Modal styles */
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  background-color: rgba(0, 0, 0, 0.5); 
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Fija el modal en la pantalla */
+  z-index: 1; /* Asegura que esté sobre otros elementos */
+  left: 0; /* Alineado a la izquierda */
+  top: 0; /* Alineado en la parte superior */
+  width: 100%; /* Ocupa el ancho completo de la pantalla */
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
 }
 
 .modal-content {
-  background-color: #000000;
-  margin: 15% auto; 
-  padding: 20px;
-  border: 4px solid #ff00ff;
-  width: 50%;
-  border-radius: 1em; 
+  background-color: #000000; /* Fondo negro del contenido del modal */
+  margin: 15% auto; /* Centra el modal verticalmente */
+  padding: 20px; /* Espaciado interno */
+  border: 4px solid #ff00ff; /* Borde con color fucsia */
+  width: 50%; /* Ocupa el 50% del ancho de la pantalla */
+  border-radius: 1em; /* Bordes redondeados */
 }
 
 .submit-btn__div button {
-  all: unset;
+  all: unset; 
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff00ff;
-  border-radius: 5px;
-  text-align: center;
+  padding: 10px 20px; 
+  background-color: #ff00ff; 
+  border-radius: 5px; 
+  text-align: center; 
 }
 
 .close {
@@ -701,81 +738,63 @@ svg {
 .close:focus {
   color: black;
   text-decoration: none;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
-/* Página de clasificación*/
-
+/* Página de clasificación */
 .main-section__ranking {
-  color:black;
-  margin-top: 2em;
+  color: black; 
+  margin-top: 1em; 
 }
 
 .container {
-  max-width: 800px; /* Ancho máximo para el contenedor */
-  margin: 20px auto; /* Centrar el contenedor */
-  padding: 20px;
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  display: flex;
+  max-width: 800px; 
+  margin: 20px auto; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  display: flex; 
 }
 
 .area-div__ranking h2 {
-  text-align: center; /* Centrar el título */
+  text-align: center; 
 }
 
 table {
-  width: 100%; /* Ancho completo */
-  border-collapse: collapse; /* Colapsar bordes */
+  width: 100%; 
+  border-collapse: collapse;
 }
 
 th, td {
-  padding: 12px; /* Espacio interno */
-  text-align: center; /* Centrar texto */
-  border-bottom: 1px solid #ddd; /* Línea inferior en filas */
+  padding: 12px; 
+  text-align: center; 
+  border-bottom: 1px solid #ddd; 
 }
 
 th {
-  background-color: #00ffff; /* Color de fondo para encabezados */
-  color: rgb(0, 0, 0); /* Color de texto en encabezados */
+  background-color: #00ffff;
+  color: rgb(0, 0, 0); 
 }
 
 tr:hover {
-  background-color: #f1f1f1; /* Color al pasar el ratón sobre filas */
+  background-color: #f1f1f1;
 }
 
 tr:nth-child(even) {
-  background-color: #f9f9f9; /* Color de fondo alternativo para filas pares */
+  background-color: #f9f9f9; 
 }
 
 tr:nth-child(odd) {
-  background-color: #ffffff; /* Color de fondo para filas impares */
+  background-color: #ffffff; 
 }
 
-
-/* Barra de desplazamiento */
+/* Barra lateral */
 ::-webkit-scrollbar {
-  width: 12px; /* Ancho de la barra de desplazamiento */
+  width: 12px; 
 }
 
-/* Pulgar (handle) de la barra de desplazamiento */
+/* Estilo de la barra lateral */
 ::-webkit-scrollbar-thumb {
-  background-color: #555; /* Color del pulgar */
-  border-radius: 6px; /* Borde redondeado del pulgar */
-}
-
-/* Cambiar la apariencia de la barra cuando el usuario interactúa con ella (hover) */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #333; /* Color del pulgar al pasar el ratón sobre él */
-}
-
-/* Estilo de la pista (track) de la barra de desplazamiento */
-::-webkit-scrollbar-track {
-  background-color: #ddd; /* Color de la pista */
-  border-radius: 8px; /* Borde redondeado de la pista */
-}
-
-/* Cambiar la apariencia de la pista cuando el usuario interactúa con ella (hover) */
-::-webkit-scrollbar-track:hover {
-  background-color: #ccc; /* Color de la pista al pasar el ratón sobre ella */
+  background-color: #555;
+  border-radius: 6px;
 }
