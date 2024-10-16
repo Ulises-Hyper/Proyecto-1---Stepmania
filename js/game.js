@@ -352,3 +352,4 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("usuarioModal").style.display = "block";
   };
 });
+
